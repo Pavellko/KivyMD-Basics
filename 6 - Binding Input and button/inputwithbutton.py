@@ -10,9 +10,9 @@ class DemoApp(MDApp):
         self.theme_cls.primary_palette = "Green"
         screen = Screen()
 
-        self.username = Builder.load_string(helpers.username_input)
+        username = Builder.load_string(helpers.username_input)
         button = MDRectangleFlatButton(text='Show',
-                                       pos_hint={'center_x': 0.5, 'center_y': 0.5},
+                                       pos_hint={'center_x': 0.5, 'center_y': 0.4},
                                        on_release=self.show_data)
         screen.add_widget(self.username)
         screen.add_widget(button)

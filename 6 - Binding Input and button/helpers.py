@@ -1,7 +1,7 @@
 username_input = """
 MDTextField:
-    hint_text: "Enter username"
-    helper_text: "or click on forgot username"
+    hint_text: "Введи своё имя"
+    helper_text: "или напиши..."
     helper_text_mode: "on_focus"
     icon_right: "android"
     icon_right_color: app.theme_cls.primary_color

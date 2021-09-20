@@ -13,7 +13,7 @@ class DemoApp(MDApp):
         screen = Screen()
 
         self.username = Builder.load_string(helpers.username_input)
-        button = MDRectangleFlatButton(text='Show',
+        button = MDRectangleFlatButton(text='Показать имя!',
                                        pos_hint={'center_x': 0.5, 'center_y': 0.5},
                                        on_release=self.show_data)
         screen.add_widget(self.username)
@@ -22,19 +22,18 @@ class DemoApp(MDApp):
 
     def show_data(self, obj):
         if self.username.text is not "":
-            user_error = self.username.text + " user does not exist."
+            user_error = self.username.text + " привет, привет!."
         else:
-            user_error = "Please enter a username"
-        self.dialog = MDDialog(title='Username check',
+            user_error = "Напиши что-нибудь!"
+        self.dialog = MDDialog(title='Привет, Мотенька, сынок!',
                                text=user_error, size_hint=(0.8, 1),
-                               buttons=[MDFlatButton(text='Close', on_release=self.close_dialog),
-                                        MDFlatButton(text='More')]
+                               buttons=[MDFlatButton(text='Закрыть', on_release=self.close_dialog)]
                                )
         self.dialog.open()
 
     def close_dialog(self, obj):
         self.dialog.dismiss()
-        # do stuff after closing the dialog
+
 
 
 DemoApp().run()
